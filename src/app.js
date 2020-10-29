@@ -18,8 +18,8 @@ app.use(logger())
 
 app.use(static(path.join(__dirname, '../public')))
 
-app.use(proxy('192.168.1.21', {
-  port: 8200,
+app.use(proxy('192.168.1.215', {
+  port: 8995,
   filter: (ctx) => {
     return ctx.request.URL.pathname.includes('/api')
   }
